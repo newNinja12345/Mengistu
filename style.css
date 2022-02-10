@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  position: relative;
+  min-height: 100vh;
+}
+
+a{
+  text-decoration: none;
+  color: white
+}
+
+a:hover{
+  color: white
+}
+
+.about-html{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/**
+* ! Header Styles starts here
+**/
+
+.fix {
+  background-color: #f9f1e5;
+}
+
+header {
+  display: flex;
+  padding: 30px 0;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9f1e5;
+}
+
+nav {
+  display: flex;
+  gap: 50px;
+}
+
+.navbar-nav > a {
+  color: rgba(69, 77, 86, 0.8);
+  text-decoration: none;
+}
+
+.navbar-nav > a:hover {
+  /* border-bottom: 5px solid #E39C31; */
+  box-shadow: 0 5px 0 #e39c31;
+}
+
+.logo {
+  width: 75px;
+  cursor: pointer;
+}
+
+.logo-text {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* color: rgba(69, 77, 86, 0.8); */
+  color: #e39c31;
+  text-decoration: none;
+}
+
+/**
+* !Same paading as header gets applied inside the box model
+**/
+
+/**
+* ! Page-1 Styles starts here
+**/
+
+.page-1 {
+  padding: 30px 0;
+  display: grid;
+  gap: 100px;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #f9f1e5;
+}
+
+.mengistu-image {
+  display: flex;
+  justify-content: center;
+}
+
+.person-img {
+  /* width: 600px; */
+  border-radius: 12px;
+}
+/* .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px
+} */
+
+.content p {
+  color: #585c65;
+  font-size: 20px;
+}
+
+.content h1,
+.page-2 h1 {
+  /* font-size: 60px; */
+  color: #27292e;
+  margin-bottom: 25px;
+}
+
+.action-button {
+  background-color: #e39c31;
+  color: white;
+  font-size: 30px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.action-button:hover,
+.logo:hover,
+.footer-right > a:hover {
+  opacity: 0.75;
+}
+
+/**
+* ! Page-2 Styles starts here
+**/
+
+.page-2 {
+  background-color: #fcf9f6;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.fix-2 {
+  background-color: #fcf9f6;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+/* .card-1, .card-2, .card-3{
+  
+} */
+
+[class^="card-"] {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  /* justify-content: center; */
+  border-radius: 10px;
+
+  align-items: center;
+  padding: 0 20px;
+  padding-bottom: 30px;
+}
+
+.page-2 h3 {
+  margin-bottom: 20px;
+}
+
+.tick-sign {
+  width: 200px;
+  /* border: 2px solid green; */
+}
+
+/**
+* ! Page-3 Styles starts here
+**/
+
+/* .page-3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 30px 100px;
+  align-items: center;
+  background-color: #fcf9f6;
+} */
+
+/**
+* ! Page-4 Styles starts here
+**/
+
+/* .page-4 { */
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 30px 100px;
+  align-items: center;
+  background-color: #fcf9f6; */
+/* } */
+
+/**
+* ! Footer Styles starts here
+**/
+
+/* footer {
+  display: grid;
+  padding: 30px 100px;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #fcf9f6;
+  color: #585c65;
+  align-items: center;
+}; */
+
+.social {
+  font-size: 45px;
+}
+
+.social a,
+.footer-right a {
+  color: #585c65;
+  text-decoration: none;
+}
+
+.footer-right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* short form of the [class ^=""]  */
+
+[class^="section-"] {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+/**
+* ! Media Queries are here
+**/
+
+@media (max-width: 800px) {
+  .page-1,
+  .page-3,
+  .page-4,
+  footer,
+  .footer-right {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+    /* background-position: bottom; */
+  }
+
+  .footer-right {
+    justify-items: center;
+  }
+
+  .footer-left {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+  }
+  .social {
+    display: grid;
+    justify-content: center;
+  }
+  .cards,
+  header,
+  footer,
+  .footer-bp {
+    flex-direction: column;
+    gap: 25px;
+  }
+} ;
+
+
